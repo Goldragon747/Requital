@@ -86,7 +86,7 @@ namespace Requital
             Canvas.SetTop(sprite, top);
             BitmapImage logo = new BitmapImage();
                         logo.BeginInit();
-                        logo.UriSource = new Uri("pack://application:,,,/Requital;component/assets/wood-texture.jpg");
+                        logo.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Cave.png");
                         logo.EndInit();
             _image.Source = logo;
             this.KeyDown += new KeyEventHandler(OnButtonKeyDown);
