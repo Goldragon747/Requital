@@ -8,6 +8,13 @@
         Title="Requital" Height="350" Width="525"
         WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
-        
+        <Canvas x:Name="mainCanvas">
+            <Image x:Name="_image"
+                   KeyDown="OnButtonKeyDown"/>
+            <Rectangle x:Name="sprite"
+                       Fill="Azure"
+                       Width="100"
+                       Height="100"/>
+        </Canvas>
     </Grid>
 </Window>
