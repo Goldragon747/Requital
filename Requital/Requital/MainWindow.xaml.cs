@@ -24,6 +24,7 @@ namespace Requital
     {
         bool isMoving = false;
         int direction = 1; // NORTH = 1 EAST = 2 SOUTH = 3 WEST = 4
+        System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
 
         private double x = 0;
         private double y = 0;
@@ -31,13 +32,50 @@ namespace Requital
         {
             InitializeComponent();
             BuildCanvas();
-            Timer timer = new Timer(1);
-            timer.Elapsed += async (sender, e) => await HandleTimer();
-            timer.Start();
+            SetTimer();
         }
-        private Task HandleTimer()
+        private void SetTimer()
         {
-            return null;
+            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(400000); //500000
+        }
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            if (isMoving)
+            {
+                if (direction == 1) //30
+                {
+                    for (int i = 0; i < 20; i++)
+                    {
+                        x += 1;
+                        Canvas.SetTop(_image, x);
+                    }
+                }
+                else if (direction == 3)
+                {
+                    for (int i = 0; i < 20; i++)
+                    {
+                        x -= 1;
+                        Canvas.SetTop(_image, x);
+                    }    
+                }
+                else if (direction == 4)
+                {
+                    for (int i = 0; i < 20; i++)
+                    {
+                        y += 1;
+                        Canvas.SetLeft(_image, y);
+                    }
+                }
+                else if (direction == 2)
+                {
+                    for (int i = 0; i < 20; i++)
+                    {
+                        y -= 1;
+                        Canvas.SetLeft(_image, y);
+                    }
+                }
+            }
         }
         public void BuildCanvas()
         {
@@ -52,6 +90,7 @@ namespace Requital
                         logo.EndInit();
             _image.Source = logo;
             this.KeyDown += new KeyEventHandler(OnButtonKeyDown);
+            this.KeyUp += new KeyEventHandler(OnButtonKeyUp);
         }
         private void OnButtonKeyDown(object sender, KeyEventArgs e)
         {
@@ -59,29 +98,48 @@ namespace Requital
             {
                 isMoving = true;
                 direction = 1;
-                x-=10;
-                Canvas.SetTop(_image,x);
             }
             else if (e.Key.ToString() == "S")
             {
                 isMoving = true;
                 direction = 3;
-                x += 10;
-                Canvas.SetTop(_image, x);
             }
             else if (e.Key.ToString() == "A")
             {
                 isMoving = true;
                 direction = 4;
-                y -= 10;
-                Canvas.SetLeft(_image, y);
             }
             else if (e.Key.ToString() == "D")
             {
                 isMoving = true;
                 direction = 2;
-                y += 10;
-                Canvas.SetLeft(_image, y);
+            }
+            if (isMoving)
+            {
+                dispatcherTimer.Start();
+            }
+        }
+        private void OnButtonKeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key.ToString() == "W")
+            {
+                isMoving = false;
+            }
+            else if (e.Key.ToString() == "S")
+            {
+                isMoving = false;
+            }
+            else if (e.Key.ToString() == "A")
+            {
+                isMoving = false;
+            }
+            else if (e.Key.ToString() == "D")
+            {
+                isMoving = false;
+            }
+            if (!isMoving)
+            {
+                dispatcherTimer.Stop();
             }
         }
     }
