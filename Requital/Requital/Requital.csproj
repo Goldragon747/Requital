@@ -105,5 +105,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="resources\Bitmap1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\wood-texture.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
