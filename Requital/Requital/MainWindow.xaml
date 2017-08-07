@@ -15,6 +15,10 @@
                        Fill="Azure"
                        Width="100"
                        Height="100"/>
+            <Label x:Name="debugLabel"
+                   Background="Aqua"
+                   Width="100"
+                   Height="30"/>
         </Canvas>
     </Grid>
 </Window>
