@@ -57,7 +57,7 @@ namespace Requital
                     {
                         x -= 1;
                         Canvas.SetTop(_image, x);
-                    }    
+                    }
                 }
                 else if (direction == 4)
                 {
@@ -85,9 +85,9 @@ namespace Requital
             double top = (mainCanvas.ActualHeight - sprite.ActualHeight) / 2;
             Canvas.SetTop(sprite, top);
             BitmapImage logo = new BitmapImage();
-                        logo.BeginInit();
-                        logo.UriSource = new Uri("pack://application:,,,/Requital;component/assets/wood-texture.jpg");
-                        logo.EndInit();
+            logo.BeginInit();
+            logo.UriSource = new Uri("pack://application:,,,/Requital;component/assets/wood-texture.jpg");
+            logo.EndInit();
             _image.Source = logo;
             this.KeyDown += new KeyEventHandler(OnButtonKeyDown);
             this.KeyUp += new KeyEventHandler(OnButtonKeyUp);
