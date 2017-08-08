@@ -12,7 +12,8 @@ namespace Requital
         {
 
             base.CharacterClass = "Mage";
-            base.Name = name;
+            base.characterName = name;
+            base.Level = 1;
             base.Experience = 0;
             base.Health = 10;
             base.AttackPower = 3;
@@ -21,8 +22,8 @@ namespace Requital
             base.MagicDefense = 3;
             base.PhysicalDefense = 1;
             base.Mana = 10;
-
-
+            string[] spells = {"Fireball"};
+            base.HasDefended = false;
         }
     }
 }

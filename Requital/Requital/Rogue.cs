@@ -12,7 +12,8 @@ namespace Requital
         {
 
             base.CharacterClass = "Rogue";
-            base.Name = name;
+            base.characterName = name;
+            base.Level = 1;
             base.Experience = 0;
             base.Health = 20;
             base.AttackPower = 8;
@@ -21,7 +22,7 @@ namespace Requital
             base.MagicDefense = 0;
             base.PhysicalDefense = 2;
             base.Mana = 0;
-
+            base.HasDefended = false;
 
         }
     }

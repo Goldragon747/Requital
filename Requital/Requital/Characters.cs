@@ -6,24 +6,28 @@ using System.Threading.Tasks;
 
 namespace Requital
     {
-        public class Characters
-        {
-            
-            private string name;
-            private int health;
-            private int mana;
-            private int magicD;
-            private int physicalD;
-            private int attackP;
-            private int spellP;
-            private int speed;
-            private string characterClass;
-            private int experience;
-            private int level;
+    public class Characters : System.Windows.Controls.Button
+    {
 
+        private string name;
+        private int health;
+        private int mana;
+        private int magicD;
+        private int physicalD;
+        private int attackP;
+        private int spellP;
+        private int speed;
+        private string characterClass;
+        private int experience;
+        private int level;
+        private string[] spellsKnown;
+        private bool hasDefended;
+
+            public bool HasDefended { get { return hasDefended; } set { hasDefended = value; }}
+            public string[] Spells{ get { return spellsKnown; }set { spellsKnown = value; }}
             public int Level { get { return level; } set { level = value;} }
             public int Experience { get { return experience; } set { experience = value; } }
-            public string Name { get { return name; } set { name = value; } }
+            public string characterName { get { return name; } set { name = value; } }
             public int Health { get { return health; } set { health = value; } }
             public int Mana { get { return mana; } set { mana = value; } }
             public int MagicDefense { get { return magicD; } set { magicD = value;  } }

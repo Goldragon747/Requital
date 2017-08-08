@@ -12,7 +12,8 @@ namespace Requital
         {
             
             base.CharacterClass = "Warrior";
-            base.Name = name;
+            base.characterName = name;
+            base.Level = 1;
             base.Experience = 0;
             base.Health = 30;
             base.AttackPower = 10;
@@ -21,6 +22,7 @@ namespace Requital
             base.MagicDefense = 0;
             base.PhysicalDefense = 3;
             base.Mana = 0;
+            base.HasDefended = false;
             
             
         }

@@ -12,7 +12,8 @@ namespace Requital
         {
 
             base.CharacterClass = "Cleric";
-            base.Name = name;
+            base.characterName = name;
+            base.Level = 1;
             base.Experience = 0;
             base.Health = 15;
             base.AttackPower = 1;
@@ -21,7 +22,8 @@ namespace Requital
             base.MagicDefense = 3;
             base.PhysicalDefense = 1;
             base.Mana = 10;
-
+            string[] spells = {"Cure"};
+            base.HasDefended = false;
 
 
         }
