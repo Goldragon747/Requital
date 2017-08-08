@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Assets.cs" />
     <Compile Include="Cleric.cs" />
     <Compile Include="Goblin.cs" />
     <Compile Include="LevelUp.cs" />
