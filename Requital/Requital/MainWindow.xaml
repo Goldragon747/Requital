@@ -6,20 +6,30 @@
         xmlns:local="clr-namespace:Requital"
         xmlns:uc="clr-namespace:Requital.UserControls"
         mc:Ignorable="d"
-        Title="Requital" Height="350" Width="525"
-        WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="Requital"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        x:Name="mainWindow">
     <Grid>
         <Canvas x:Name="mainCanvas">
             <Image x:Name="_image"
                    KeyDown="OnButtonKeyDown"/>
-            <Rectangle x:Name="sprite"
-                       Fill="Azure"
-                       Width="100"
-                       Height="100"/>
-            <Label x:Name="debugLabel"
-                   Background="Aqua"
+            
+            <Label x:Name="debug"
                    Width="100"
-                   Height="30"/>
+                   Height="30"
+                   Foreground="White"
+                   FontSize="18"
+                   Background="Bisque"
+                   Content="123123"/>
+
+            <Image x:Name="sprite"
+                       Width="100"
+                       Height="100"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Canvas.Top="300"
+                   Canvas.Left="570"/>
+
         </Canvas>
     </Grid>
 </Window>

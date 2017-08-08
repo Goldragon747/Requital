@@ -54,10 +54,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Character.cs" />
-    <Compile Include="UserControls\CharacterStats.xaml.cs">
-      <DependentUpon>CharacterStats.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Cleric.cs" />
+    <Compile Include="Mage.cs" />
+    <Compile Include="Rogue.cs" />
+    <Compile Include="Warrior.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,18 +66,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Characters.cs" />
+    <Compile Include="Combat.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControls\CharacterStats.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UserControls\CombatMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -111,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\wood-texture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Rogue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

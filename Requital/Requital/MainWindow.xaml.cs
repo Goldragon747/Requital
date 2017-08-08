@@ -26,8 +26,8 @@ namespace Requital
         int direction = 1; // NORTH = 1 EAST = 2 SOUTH = 3 WEST = 4
         System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
 
-        private double x = 0;
-        private double y = 0;
+        private double x = -900;
+        private double y = -1500;
         public MainWindow()
         {
             InitializeComponent();
@@ -57,7 +57,7 @@ namespace Requital
                     {
                         x -= 1;
                         Canvas.SetTop(_image, x);
-                    }
+                    }    
                 }
                 else if (direction == 4)
                 {
@@ -79,15 +79,16 @@ namespace Requital
         }
         public void BuildCanvas()
         {
-            double left = (mainCanvas.ActualWidth - sprite.ActualWidth) / 2;
-            Canvas.SetLeft(sprite, left);
+            BitmapImage rougeLogo = new BitmapImage();
+            rougeLogo.BeginInit();
+            rougeLogo.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rogue.png");
+            rougeLogo.EndInit();
+            sprite.Source = rougeLogo;
 
-            double top = (mainCanvas.ActualHeight - sprite.ActualHeight) / 2;
-            Canvas.SetTop(sprite, top);
             BitmapImage logo = new BitmapImage();
-            logo.BeginInit();
-            logo.UriSource = new Uri("pack://application:,,,/Requital;component/assets/wood-texture.jpg");
-            logo.EndInit();
+                        logo.BeginInit();
+                        logo.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Cave.png");
+                        logo.EndInit();
             _image.Source = logo;
             this.KeyDown += new KeyEventHandler(OnButtonKeyDown);
             this.KeyUp += new KeyEventHandler(OnButtonKeyUp);
