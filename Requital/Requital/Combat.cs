@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Requital
 {
-    class Combat
+    public class Combat
     {
         
         Characters c2 = new Characters();
