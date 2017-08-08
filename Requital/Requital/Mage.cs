@@ -23,6 +23,7 @@ namespace Requital
             base.PhysicalDefense = 1;
             base.Mana = 10;
             string[] spells = {"Fireball"};
+            base.Spells = spells;
             base.HasDefended = false;
         }
     }

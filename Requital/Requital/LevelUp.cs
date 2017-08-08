@@ -42,6 +42,7 @@ namespace Requital
             Leveler.PhysicalDefense += pDefenseGain;
             Leveler.MagicDefense += mDefenseGain;
             Leveler.Mana += manaGain;
+            c.loadDialogue(Leveler.Name + " has leveled up!");
         } 
     }
 }

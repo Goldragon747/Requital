@@ -55,8 +55,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Cleric.cs" />
+    <Compile Include="Goblin.cs" />
+    <Compile Include="LevelUp.cs" />
     <Compile Include="Mage.cs" />
     <Compile Include="Rogue.cs" />
+    <Compile Include="Skeleton.cs" />
+    <Compile Include="Tian.cs" />
     <Compile Include="Warrior.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -105,9 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\wood-texture.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\Rogue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
