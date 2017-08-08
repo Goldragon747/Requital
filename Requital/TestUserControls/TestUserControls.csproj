@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5D8FA0A9-72C3-4CA4-877C-4E15A8EF50FC}</ProjectGuid>
+    <ProjectGuid>{DCBFEA87-4082-4EE7-A30B-A0DE0D65F444}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Requital</RootNamespace>
-    <AssemblyName>Requital</AssemblyName>
+    <RootNamespace>TestUserControls</RootNamespace>
+    <AssemblyName>TestUserControls</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,14 +54,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Cleric.cs" />
-    <Compile Include="Goblin.cs" />
-    <Compile Include="LevelUp.cs" />
-    <Compile Include="Mage.cs" />
-    <Compile Include="Rogue.cs" />
-    <Compile Include="Skeleton.cs" />
-    <Compile Include="Tian.cs" />
-    <Compile Include="Warrior.cs" />
+    <Compile Include="UserControls\CharacterStats.xaml.cs">
+      <DependentUpon>CharacterStats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CombatMenu.xaml.cs">
+      <DependentUpon>CombatMenu.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,12 +68,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Characters.cs" />
-    <Compile Include="Combat.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControls\CharacterStats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CombatMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -104,11 +108,5 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Resource Include="resources\Bitmap1.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\wood-texture.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

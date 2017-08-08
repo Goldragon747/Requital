@@ -20,6 +20,8 @@ namespace Requital
                 base.Speed = 200;
                 base.MagicDefense = 5;
                 base.PhysicalDefense = 5;
+                string[] spells = { "Fireball" };
+                base.Spells = spells;
                 base.Mana = 100;
             }
         
