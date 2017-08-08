@@ -102,5 +102,8 @@
   <ItemGroup>
     <Resource Include="assets\wood-texture.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Rogue.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
