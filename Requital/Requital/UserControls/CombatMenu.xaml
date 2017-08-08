@@ -4,9 +4,23 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Requital.UserControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
-    </Grid>
+             mc:Ignorable="d">
+
+    <WrapPanel x:Name="Options" Background="LimeGreen">
+        <Button x:Name="Attack" Content="Attack"
+                Width="250"
+                FontSize="24"/>
+        <Button x:Name="Magic" Content="Magic"
+                Width="250"
+                FontSize="24"
+                FontStyle="Italic"/>
+        <Button x:Name="Defend" Content="Defend"
+                Width="250"
+                FontSize="24"
+                FontWeight="Heavy"/>
+        <Button x:Name="Flee" Content="Flee"
+                Width="250"
+                FontSize="24" 
+                FontStyle="Oblique"/>
+    </WrapPanel>
 </UserControl>
