@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace TestUserControls.UserControls
 {
     /// <summary>
-    /// Interaction logic for CombatMenu.xaml
+    /// Interaction logic for CombatScreen.xaml
     /// </summary>
     public partial class CombatScreen : UserControl
     {
