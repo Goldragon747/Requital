@@ -10,38 +10,38 @@ namespace Requital
     public class Assets
     {
         // ROUGE \\
-        BitmapImage rouge_left_1 = new BitmapImage();
-        BitmapImage rouge_left_2 = new BitmapImage();
-        BitmapImage rouge_left_3 = new BitmapImage();
-        BitmapImage rouge_left_4 = new BitmapImage();
-        BitmapImage rouge_left_5 = new BitmapImage();
-        BitmapImage rouge_left_6 = new BitmapImage();
-        BitmapImage rouge_left_7 = new BitmapImage();
-        BitmapImage rouge_left_8 = new BitmapImage();
-        BitmapImage rouge_right_1 = new BitmapImage();
-        BitmapImage rouge_right_2 = new BitmapImage();
-        BitmapImage rouge_right_3 = new BitmapImage();
-        BitmapImage rouge_right_4 = new BitmapImage();
-        BitmapImage rouge_right_5 = new BitmapImage();
-        BitmapImage rouge_right_6 = new BitmapImage();
-        BitmapImage rouge_right_7 = new BitmapImage();
-        BitmapImage rouge_right_8 = new BitmapImage();
-        BitmapImage rouge_up_1 = new BitmapImage();
-        BitmapImage rouge_up_2 = new BitmapImage();
-        BitmapImage rouge_up_3 = new BitmapImage();
-        BitmapImage rouge_up_4 = new BitmapImage();
-        BitmapImage rouge_up_5 = new BitmapImage();
-        BitmapImage rouge_up_6 = new BitmapImage();
-        BitmapImage rouge_up_7 = new BitmapImage();
-        BitmapImage rouge_up_8 = new BitmapImage();
-        BitmapImage rouge_down_1 = new BitmapImage();
-        BitmapImage rouge_down_2 = new BitmapImage();
-        BitmapImage rouge_down_3 = new BitmapImage();
-        BitmapImage rouge_down_4 = new BitmapImage();
-        BitmapImage rouge_down_5 = new BitmapImage();
-        BitmapImage rouge_down_6 = new BitmapImage();
-        BitmapImage rouge_down_7 = new BitmapImage();
-        BitmapImage rouge_down_8 = new BitmapImage();
+        public BitmapImage rouge_left_1 = new BitmapImage();
+        public BitmapImage rouge_left_2 = new BitmapImage();
+        public BitmapImage rouge_left_3 = new BitmapImage();
+        public BitmapImage rouge_left_4 = new BitmapImage();
+        public BitmapImage rouge_left_5 = new BitmapImage();
+        public BitmapImage rouge_left_6 = new BitmapImage();
+        public BitmapImage rouge_left_7 = new BitmapImage();
+        public BitmapImage rouge_left_8 = new BitmapImage();
+        public BitmapImage rouge_right_1 = new BitmapImage();
+        public BitmapImage rouge_right_2 = new BitmapImage();
+        public BitmapImage rouge_right_3 = new BitmapImage();
+        public BitmapImage rouge_right_4 = new BitmapImage();
+        public BitmapImage rouge_right_5 = new BitmapImage();
+        public BitmapImage rouge_right_6 = new BitmapImage();
+        public BitmapImage rouge_right_7 = new BitmapImage();
+        public BitmapImage rouge_right_8 = new BitmapImage();
+        public BitmapImage rouge_up_1 = new BitmapImage();
+        public BitmapImage rouge_up_2 = new BitmapImage();
+        public BitmapImage rouge_up_3 = new BitmapImage();
+        public BitmapImage rouge_up_4 = new BitmapImage();
+        public BitmapImage rouge_up_5 = new BitmapImage();
+        public BitmapImage rouge_up_6 = new BitmapImage();
+        public BitmapImage rouge_up_7 = new BitmapImage();
+        public BitmapImage rouge_up_8 = new BitmapImage();
+        public BitmapImage rouge_down_1 = new BitmapImage();
+        public BitmapImage rouge_down_2 = new BitmapImage();
+        public BitmapImage rouge_down_3 = new BitmapImage();
+        public BitmapImage rouge_down_4 = new BitmapImage();
+        public BitmapImage rouge_down_5 = new BitmapImage();
+        public BitmapImage rouge_down_6 = new BitmapImage();
+        public BitmapImage rouge_down_7 = new BitmapImage();
+        public BitmapImage rouge_down_8 = new BitmapImage();
         
         public void LoadImages()
         {
@@ -119,31 +119,31 @@ namespace Requital
             rouge_down_1.EndInit();
 
             rouge_down_2.BeginInit();
-            rouge_down_2.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/1.png");
+            rouge_down_2.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/2.png");
             rouge_down_2.EndInit();
 
             rouge_down_3.BeginInit();
-            rouge_down_3.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/1.png");
+            rouge_down_3.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/3.png");
             rouge_down_3.EndInit();
 
             rouge_down_4.BeginInit();
-            rouge_down_4.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/1.png");
+            rouge_down_4.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/4.png");
             rouge_down_4.EndInit();
 
             rouge_down_5.BeginInit();
-            rouge_down_5.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/1.png");
+            rouge_down_5.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/5.png");
             rouge_down_5.EndInit();
 
             rouge_down_6.BeginInit();
-            rouge_down_6.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/1.png");
+            rouge_down_6.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/6.png");
             rouge_down_6.EndInit();
 
             rouge_down_7.BeginInit();
-            rouge_down_7.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/1.png");
+            rouge_down_7.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/7.png");
             rouge_down_7.EndInit();
 
             rouge_down_8.BeginInit();
-            rouge_down_8.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/1.png");
+            rouge_down_8.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Rouge/moving_down/8.png");
             rouge_down_8.EndInit();
 
             // up
