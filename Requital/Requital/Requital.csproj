@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Assets.cs" />
     <Compile Include="Cleric.cs" />
     <Compile Include="Goblin.cs" />
     <Compile Include="LevelUp.cs" />
@@ -103,12 +104,57 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="assets\Rogue.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\Bitmap1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\wood-texture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Cave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Rouge\moving_down\1.png" />
+    <Resource Include="assets\Rouge\moving_down\2.png" />
+    <Resource Include="assets\Rouge\moving_down\3.png" />
+    <Resource Include="assets\Rouge\moving_down\4.png" />
+    <Resource Include="assets\Rouge\moving_down\5.png" />
+    <Resource Include="assets\Rouge\moving_down\6.png" />
+    <Resource Include="assets\Rouge\moving_down\7.png" />
+    <Resource Include="assets\Rouge\moving_down\8.png" />
+    <Resource Include="assets\Rouge\moving_left\1.png" />
+    <Resource Include="assets\Rouge\moving_left\2.png" />
+    <Resource Include="assets\Rouge\moving_left\3.png" />
+    <Resource Include="assets\Rouge\moving_left\4.png" />
+    <Resource Include="assets\Rouge\moving_left\5.png" />
+    <Resource Include="assets\Rouge\moving_left\6.png" />
+    <Resource Include="assets\Rouge\moving_left\7.png" />
+    <Resource Include="assets\Rouge\moving_left\8.png" />
+    <Resource Include="assets\Rouge\moving_right\1.png" />
+    <Resource Include="assets\Rouge\moving_right\2.png" />
+    <Resource Include="assets\Rouge\moving_right\3.png" />
+    <Resource Include="assets\Rouge\moving_right\4.png" />
+    <Resource Include="assets\Rouge\moving_right\5.png" />
+    <Resource Include="assets\Rouge\moving_right\6.png" />
+    <Resource Include="assets\Rouge\moving_right\7.png" />
+    <Resource Include="assets\Rouge\moving_right\8.png" />
+    <Resource Include="assets\Rouge\moving_up\1.png" />
+    <Resource Include="assets\Rouge\moving_up\2.png" />
+    <Resource Include="assets\Rouge\moving_up\3.png" />
+    <Resource Include="assets\Rouge\moving_up\4.png" />
+    <Resource Include="assets\Rouge\moving_up\5.png" />
+    <Resource Include="assets\Rouge\moving_up\6.png" />
+    <Resource Include="assets\Rouge\moving_up\7.png" />
+    <Resource Include="assets\Rouge\moving_up\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Cave.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BruschiArtwork\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
