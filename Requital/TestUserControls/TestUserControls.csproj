@@ -107,6 +107,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Requital\Requital.csproj">
+      <Project>{5d8fa0a9-72c3-4ca4-877c-4e15a8ef50fc}</Project>
+      <Name>Requital</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

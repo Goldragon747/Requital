@@ -55,6 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Cleric.cs" />
+    <Compile Include="Encounters.cs" />
     <Compile Include="Goblin.cs" />
     <Compile Include="LevelUp.cs" />
     <Compile Include="Mage.cs" />
