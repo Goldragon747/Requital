@@ -56,8 +56,8 @@
     </ApplicationDefinition>
     <Compile Include="Assets.cs" />
     <Compile Include="Cleric.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Goblin.cs" />
+	<Compile Include="Game.cs" />
+	<Compile Include="Encounters.cs" />    <Compile Include="Goblin.cs" />
     <Compile Include="LevelUp.cs" />
     <Compile Include="Mage.cs" />
     <Compile Include="Movement.cs" />

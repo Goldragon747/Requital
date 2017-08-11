@@ -8,5 +8,11 @@ namespace Requital
 {
     public class Encounters
     {
+        Random r = new Random();
+        public void pickEncounter()
+        {
+            r.Next(100);
+
+        }
     }
 }
