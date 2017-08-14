@@ -26,6 +26,7 @@ namespace Requital
             string[] spells = {"Cure"};
             base.Spells = spells;
             base.HasDefended = false;
+            base.IsDead = false;
 
 
         }

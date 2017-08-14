@@ -9,13 +9,13 @@ namespace Requital
     public class Tian : Characters
     {
         
-            public void goblin()
+            public void TianBoss()
             {
                 base.CharacterClass = "Boss";
                 base.characterName = "Tian";
                 base.Experience = 10000;
-                base.Health = 100;
-                base.MaxHealth = 100;
+                base.Health = 300;
+                base.MaxHealth = 300;
                 base.AttackPower = 10;
                 base.SpellPower = 20;
                 base.Speed = 200;
@@ -24,6 +24,7 @@ namespace Requital
                 string[] spells = { "Fireball" };
                 base.Spells = spells;
                 base.Mana = 100;
+                base.IsDead = false;
             }
         
     }

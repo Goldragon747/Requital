@@ -29,8 +29,9 @@ namespace Requital
                 finalDamage = 0;
             }
             defender.Health -= finalDamage;
-            if(defender.Health <= 0)
+            if(defender.Health <= 0 || defender.Health == 0)
             {
+                defender.Health = 0;
                 kill(attacker, defender);
             }
         }
@@ -47,11 +48,21 @@ namespace Requital
             {
                 finalDamage = 0;
             }
+            
+            if(defender.Health == 0 || defender.Health <= 0)
+            {
+                defender.Health = 0;
+                kill(attacker, defender);
+            }
             return finalDamage;
         }
         public void heal(Characters healer, Characters afflicted)
         {
             afflicted.Health += healer.SpellPower;
+            if(afflicted.Health >= afflicted.MaxHealth)
+            {
+                afflicted.Health = afflicted.MaxHealth;
+            }
         }
         public void defend(Characters defender)
         {

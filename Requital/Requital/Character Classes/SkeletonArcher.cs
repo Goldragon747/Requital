@@ -21,6 +21,7 @@ namespace Requital
             base.MagicDefense = 0;
             base.PhysicalDefense = 0;
             base.Mana = 0;
+            base.IsDead = false;
         }
     }
 }

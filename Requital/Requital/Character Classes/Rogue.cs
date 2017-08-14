@@ -24,7 +24,7 @@ namespace Requital
             base.PhysicalDefense = 2;
             base.Mana = 0;
             base.HasDefended = false;
-
+            base.IsDead = false;
         }
     }
 }

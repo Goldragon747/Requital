@@ -23,9 +23,9 @@ namespace Requital
         private string[] spellsKnown;
         private bool hasDefended;
         private int maxHealth;
+        private bool isDead;
 
-
-
+            public bool IsDead { get { return isDead; } set { isDead = value; }}
             public int MaxHealth{ get { return maxHealth; } set { maxHealth = value; }}
             public bool HasDefended { get { return hasDefended; } set { hasDefended = value; }}
             public string[] Spells{ get { return spellsKnown; }set { spellsKnown = value; }}

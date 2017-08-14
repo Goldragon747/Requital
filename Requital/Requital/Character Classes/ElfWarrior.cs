@@ -6,23 +6,26 @@ using System.Threading.Tasks;
 
 namespace Requital.Character_Classes
 {
-    class Knight : Characters
+    class ElfWarrior : Characters
     {
-        public void knight()
+        public void elfWarrior()
         {
             base.CharacterClass = "Monster";
-            base.characterName = "Knight";
+            base.characterName = "Elf Rogue";
             base.Experience = 100;
-            base.Health = 50;
-            base.MaxHealth = 50;
-            base.AttackPower = 5;
+            base.Health = 60;
+            base.MaxHealth = 60;
+            base.AttackPower = 7;
             base.SpellPower = 0;
-            base.Speed = 40;
-            base.MagicDefense = 4;
-            base.PhysicalDefense = 4;
+            base.Speed = 100;
+            base.MagicDefense = 0;
+            base.PhysicalDefense = 3;
             base.Mana = 0;
+            string[] spells = { };
+            base.Spells = spells;
             base.HasDefended = false;
             base.IsDead = false;
+
 
         }
     }

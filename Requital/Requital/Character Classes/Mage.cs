@@ -26,6 +26,7 @@ namespace Requital
             string[] spells = {"Fireball"};
             base.Spells = spells;
             base.HasDefended = false;
+            base.IsDead = false;
         }
     }
 }
