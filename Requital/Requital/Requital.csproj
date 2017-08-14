@@ -62,6 +62,7 @@
     <Compile Include="Mage.cs" />
     <Compile Include="Rogue.cs" />
     <Compile Include="Skeleton.cs" />
+    <Compile Include="SkeletonArcher.cs" />
     <Compile Include="Tian.cs" />
     <Compile Include="Warrior.cs" />
     <Page Include="MainWindow.xaml">

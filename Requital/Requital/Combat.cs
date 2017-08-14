@@ -85,6 +85,10 @@ namespace Requital
             //We will actually have this go to the combat dialogue GUI Element in the future
             return dialogue;
         }
+        public void death()
+        {
+
+        }
         
     }
 }
