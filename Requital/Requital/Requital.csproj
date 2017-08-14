@@ -56,15 +56,20 @@
     </ApplicationDefinition>
     <Compile Include="Assets.cs" />
     <Compile Include="Cleric.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="Encounters.cs" />
     <Compile Include="Goblin.cs" />
     <Compile Include="LevelUp.cs" />
     <Compile Include="Mage.cs" />
+    <Compile Include="Movement.cs" />
     <Compile Include="Rogue.cs" />
     <Compile Include="Skeleton.cs" />
     <Compile Include="SkeletonArcher.cs" />
     <Compile Include="Tian.cs" />
     <Compile Include="Warrior.cs" />
+    <Compile Include="Windows\MovementScreen.xaml.cs">
+      <DependentUpon>MovementScreen.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,6 +84,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\MovementScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -111,12 +120,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\Bitmap1.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\wood-texture.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\Cave.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\Rouge\moving_down\1.png" />
@@ -153,10 +156,10 @@
     <Resource Include="assets\Rouge\moving_up\8.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\Cave.jpg" />
+    <Folder Include="BruschiArtwork\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BruschiArtwork\" />
+    <Resource Include="assets\Maps\Cave.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
