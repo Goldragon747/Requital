@@ -55,14 +55,18 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Assets.cs" />
-    <Compile Include="Cleric.cs" />
-    <Compile Include="Goblin.cs" />
+    <Compile Include="Character Classes\Cleric.cs" />
+    <Compile Include="Character Classes\ElfCleric.cs" />
+    <Compile Include="Character Classes\Knight.cs" />
+    <Compile Include="Encounters.cs" />
+    <Compile Include="Character Classes\Goblin.cs" />
     <Compile Include="LevelUp.cs" />
-    <Compile Include="Mage.cs" />
-    <Compile Include="Rogue.cs" />
-    <Compile Include="Skeleton.cs" />
-    <Compile Include="Tian.cs" />
-    <Compile Include="Warrior.cs" />
+    <Compile Include="Character Classes\Mage.cs" />
+    <Compile Include="Character Classes\Rogue.cs" />
+    <Compile Include="Character Classes\Skeleton.cs" />
+    <Compile Include="Character Classes\SkeletonArcher.cs" />
+    <Compile Include="Character Classes\Tian.cs" />
+    <Compile Include="Character Classes\Warrior.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,7 +75,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Characters.cs" />
+    <Compile Include="Character Classes\Characters.cs" />
     <Compile Include="Combat.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
