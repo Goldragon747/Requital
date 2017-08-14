@@ -14,6 +14,7 @@ namespace Requital
             base.characterName = "Skeleton Archer";
             base.Experience = 20;
             base.Health = 10;
+            base.MaxHealth = 10;
             base.AttackPower = 3;
             base.SpellPower = 0;
             base.Speed = 60;

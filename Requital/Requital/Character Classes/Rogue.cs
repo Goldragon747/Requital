@@ -16,6 +16,7 @@ namespace Requital
             base.Level = 1;
             base.Experience = 0;
             base.Health = 20;
+            base.MaxHealth = 20;
             base.AttackPower = 8;
             base.SpellPower = 0;
             base.Speed = 75;

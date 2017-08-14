@@ -22,7 +22,11 @@ namespace Requital
         private int level;
         private string[] spellsKnown;
         private bool hasDefended;
+        private int maxHealth;
 
+
+
+            public int MaxHealth{ get { return maxHealth; } set { maxHealth = value; }}
             public bool HasDefended { get { return hasDefended; } set { hasDefended = value; }}
             public string[] Spells{ get { return spellsKnown; }set { spellsKnown = value; }}
             public int Level { get { return level; } set { level = value;} }

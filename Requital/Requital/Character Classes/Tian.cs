@@ -15,6 +15,7 @@ namespace Requital
                 base.characterName = "Tian";
                 base.Experience = 10000;
                 base.Health = 100;
+                base.MaxHealth = 100;
                 base.AttackPower = 10;
                 base.SpellPower = 20;
                 base.Speed = 200;

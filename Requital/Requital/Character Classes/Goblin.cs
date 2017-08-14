@@ -14,6 +14,7 @@ namespace Requital
             base.characterName = "Goblin";
             base.Experience = 10;
             base.Health = 10;
+            base.MaxHealth = 10;
             base.AttackPower = 2;
             base.SpellPower = 0;
             base.Speed = 20;
