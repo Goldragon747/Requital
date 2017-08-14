@@ -14,6 +14,7 @@ namespace Requital.Character_Classes
             base.characterName = "Elf Cleric";
             base.Experience = 125;
             base.Health = 40;
+            base.MaxHealth = 40;
             base.AttackPower = 3;
             base.SpellPower = 10;
             base.Speed = 30;

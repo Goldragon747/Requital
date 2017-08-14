@@ -14,6 +14,7 @@ namespace Requital.Character_Classes
             base.characterName = "Knight";
             base.Experience = 100;
             base.Health = 50;
+            base.MaxHealth = 50;
             base.AttackPower = 5;
             base.SpellPower = 0;
             base.Speed = 40;
