@@ -56,8 +56,9 @@
     </ApplicationDefinition>
     <Compile Include="Assets.cs" />
     <Compile Include="Cleric.cs" />
-	<Compile Include="Game.cs" />
-	<Compile Include="Encounters.cs" />    <Compile Include="Goblin.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Encounters.cs" />
+    <Compile Include="Goblin.cs" />
     <Compile Include="LevelUp.cs" />
     <Compile Include="Mage.cs" />
     <Compile Include="Movement.cs" />
@@ -120,12 +121,6 @@
     <Resource Include="resources\Bitmap1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\wood-texture.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\Cave.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="assets\Rouge\moving_down\1.png" />
     <Resource Include="assets\Rouge\moving_down\2.png" />
     <Resource Include="assets\Rouge\moving_down\3.png" />
@@ -160,10 +155,10 @@
     <Resource Include="assets\Rouge\moving_up\8.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\Cave.jpg" />
+    <Folder Include="BruschiArtwork\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BruschiArtwork\" />
+    <Resource Include="assets\Maps\Cave.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

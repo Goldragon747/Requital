@@ -35,12 +35,7 @@ namespace Requital
         public void BuildCanvas()
         {
             MovementScreen.Sprite = assets.rouge_right_1;
-
-            BitmapImage logo = new BitmapImage();
-            logo.BeginInit();
-            logo.UriSource = new Uri("pack://application:,,,/Requital;component/assets/Cave.jpg");
-            logo.EndInit();
-            MovementScreen.MovementBackground = logo;
+            MovementScreen.MovementBackground = assets.cave;
             this.KeyDown += new KeyEventHandler(OnButtonKeyDown);
             this.KeyUp += new KeyEventHandler(OnButtonKeyUp);
         }

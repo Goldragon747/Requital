@@ -19,8 +19,8 @@ namespace Requital
 
         MainWindow mainWindow;
 
-        private double x = -2900;
-        private double y = -2500;
+        private double x = 0;
+        private double y = 0;
 
         public Movement(MainWindow window)
         {
