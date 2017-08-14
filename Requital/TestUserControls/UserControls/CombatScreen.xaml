@@ -5,20 +5,35 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TestUserControls.UserControls"
              mc:Ignorable="d" >
-    <Grid x:Name="Options" Width="400">
+    <Grid x:Name="Options">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <StackPanel x:Name="OptionsPanel" Grid.Row="0" Background="Blue" Orientation="Horizontal">
-            <StackPanel.Resources>
+        
+        <!--Monster Grid-->
+        <UniformGrid x:Name="MonsterGrid" Background="Yellow" Grid.ColumnSpan="2" Columns="3" Rows="3"/>
+
+        <!--Character Grid-->
+        <UniformGrid x:Name="CharacterGrid" Background="Gray" Grid.Column="2" Columns="1"/>
+
+        <!--Mini Monster Stats-->
+        <WrapPanel x:Name="MonStats" Background="LightGreen" Grid.Row="1" Grid.Column="0" Orientation="Horizontal"/>
+
+        <!--View Options-->
+        <UniformGrid x:Name="OptionsPanel" Grid.Row="1" Grid.Column="1" Background="Blue">
+            <UniformGrid.Resources>
                 <Style TargetType="Button">
                     <Setter Property="Button.HorizontalContentAlignment" Value="Center"/>
                     <Setter Property="Button.VerticalContentAlignment" Value="Center"/>
-                    <Setter Property="Button.Width" Value="100"/>
                     <Setter Property="Button.FontSize" Value="24"/>
                 </Style>
-            </StackPanel.Resources>
+            </UniformGrid.Resources>
             <Button x:Name="Attack" Content="Attack" Click="Attack_Click"/>
             <Button x:Name="Magic" Content="Magic" Click="Magic_Click"
                 FontStyle="Italic"/>
@@ -26,10 +41,19 @@
                 FontWeight="Heavy"/>
             <Button x:Name="Flee" Content="Flee" Click="Flee_Click"
                 FontStyle="Oblique"/>
-        </StackPanel>
-        <Label x:Name="ViewOptions" Visibility="Hidden" Margin="0" Grid.Row="1"
-               HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Button x:Name="BackButton" Click="Close_Click"/>
-        </Label>
+        </UniformGrid>
+
+        <!--Mini Character Stats-->
+        <WrapPanel x:Name="CharStats" Background="Chocolate" Grid.Row="1" Grid.Column="2"/>
+
+        <!--Magic Menu-->
+        <Grid x:Name="ViewMagicGrid" Visibility="Hidden" Grid.Row="1" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="25*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="BackButton" Click="Close_Click" Grid.Row="0"/>
+            <WrapPanel x:Name="ViewMagic" Grid.Row="1"/>
+        </Grid>
     </Grid>
 </UserControl>
