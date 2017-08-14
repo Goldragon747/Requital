@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:TestUserControls"
         xmlns:uc="clr-namespace:TestUserControls.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Test UserControls" Width="1250" Height="650" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <uc:CombatScreen/>
+        <!--<uc:CharacterStats/>-->
     </Grid>
 </Window>
