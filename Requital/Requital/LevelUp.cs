@@ -38,7 +38,7 @@ namespace Requital
             }
             else
             {
-                c.loadDialogue("Doom is upon you, your enemy has leveled up");
+                c.loadDialogue("Doom is upon you, your enemy has leveled up!");
             }
             
         }
