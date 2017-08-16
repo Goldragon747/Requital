@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Requital.Spells;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,29 +30,49 @@ namespace Requital
                 finalDamage = 0;
             }
             defender.Health -= finalDamage;
-            if(defender.Health <= 0)
+            if(defender.Health <= 0 || defender.Health == 0)
             {
+                defender.Health = 0;
                 kill(attacker, defender);
             }
         }
         public int fireBall(Characters attacker, Characters defender)
         {
-            int damage = attacker.SpellPower;
-            if(defender.HasDefended == true)
+            FireBall f = new FireBall();
+            if (attacker.Mana >= f.ManaCost)
             {
-                damage = damage / 2;
-                defender.HasDefended = false;
+                attacker.Mana -= f.ManaCost;
+                int damage = attacker.SpellPower + f.Damage;
+                if (defender.HasDefended == true)
+                {
+                    damage = damage / 2;
+                    defender.HasDefended = false;
+                }
+                int finalDamage = attacker.SpellPower - defender.MagicDefense;
+                if (finalDamage <= 0)
+                {
+                    finalDamage = 0;
+                }
+
+                if (defender.Health == 0 || defender.Health <= 0)
+                {
+                    defender.Health = 0;
+                    kill(attacker, defender);
+                }
+                return finalDamage;
             }
-            int finalDamage = attacker.SpellPower - defender.MagicDefense;
-            if(finalDamage <= 0)
+            else
             {
-                finalDamage = 0;
+                return 0;
             }
-            return finalDamage;
         }
         public void heal(Characters healer, Characters afflicted)
         {
             afflicted.Health += healer.SpellPower;
+            if(afflicted.Health >= afflicted.MaxHealth)
+            {
+                afflicted.Health = afflicted.MaxHealth;
+            }
         }
         public void defend(Characters defender)
         {

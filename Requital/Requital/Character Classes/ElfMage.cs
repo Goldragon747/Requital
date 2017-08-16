@@ -6,26 +6,25 @@ using System.Threading.Tasks;
 
 namespace Requital.Character_Classes
 {
-    class ElfCleric : Characters
+    class ElfMage : Characters
     {
-        public void elfCleric()
+        public void elfMage()
         {
             base.CharacterClass = "Monster";
-            base.characterName = "Elf Cleric";
-            base.Experience = 125;
-            base.Health = 40;
-            base.MaxHealth = 40;
-            base.AttackPower = 3;
+            base.characterName = "Elf Mage";
+            base.Experience = 150;
+            base.Health = 30;
+            base.MaxHealth = 30;
+            base.AttackPower = 4;
             base.SpellPower = 10;
-            base.Speed = 30;
+            base.Speed = 40;
             base.MagicDefense = 5;
             base.PhysicalDefense = 1;
             base.Mana = 100;
-            string[] spells = { "Cure" };
+            string[] spells = { "FireBall" };
             base.Spells = spells;
-            base.HasDefended = false;
             base.IsDead = false;
-
+            base.HasDefended = false;
 
         }
     }

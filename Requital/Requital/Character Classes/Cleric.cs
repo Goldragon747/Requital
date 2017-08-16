@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Requital
 {
-    class Cleric : Characters
+    public class Cleric : Characters
     {
         public void cleric(string name)
         {
@@ -26,6 +26,7 @@ namespace Requital
             string[] spells = {"Cure"};
             base.Spells = spells;
             base.HasDefended = false;
+            base.IsDead = false;
 
 
         }

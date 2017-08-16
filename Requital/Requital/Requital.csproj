@@ -57,6 +57,10 @@
     <Compile Include="Assets.cs" />
     <Compile Include="Character Classes\Cleric.cs" />
     <Compile Include="Character Classes\ElfCleric.cs" />
+    <Compile Include="Character Classes\ElfMage.cs" />
+    <Compile Include="Character Classes\ElfRogue.cs" />
+    <Compile Include="Character Classes\ElfWarrior.cs" />
+    <Compile Include="Character Classes\GoblinRogue.cs" />
     <Compile Include="Character Classes\Knight.cs" />
     <Compile Include="Encounters.cs" />
     <Compile Include="Character Classes\Goblin.cs" />
@@ -68,8 +72,9 @@
     <Compile Include="Character Classes\SkeletonArcher.cs" />
     <Compile Include="Character Classes\Tian.cs" />
     <Compile Include="Character Classes\Warrior.cs" />
-    <Compile Include="Trigger.cs" />
-    <Compile Include="Windows\MovementScreen.xaml.cs">
+	<Compile Include="Spells\FireBall.cs" />
+	<Compile Include="Trigger.cs" />	<Compile Include="Spells\Heal.cs" />
+    <Compile Include="Spells\Spells.cs" />    <Compile Include="Windows\MovementScreen.xaml.cs">
       <DependentUpon>MovementScreen.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -164,8 +169,7 @@
   <ItemGroup>
     <Resource Include="assets\Maps\Cave.png" />
   </ItemGroup>
-  <ItemGroup>
+	<ItemGroup>
     <Resource Include="assets\Maps\FinalCave.jpg" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  </ItemGroup>  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

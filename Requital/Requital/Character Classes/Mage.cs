@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Requital
 {
-    class Mage : Characters
+    public class Mage : Characters
     {
         public void mage(string name)
         {
@@ -26,6 +26,7 @@ namespace Requital
             string[] spells = {"Fireball"};
             base.Spells = spells;
             base.HasDefended = false;
+            base.IsDead = false;
         }
     }
 }
