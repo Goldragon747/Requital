@@ -36,6 +36,24 @@ namespace Requital.Windows
             get { return mainCanvas; }
             set { mainCanvas = value; }
         }
+        public Canvas MapCanvas
+        {
+            get { return Map; }
+            set { Map = value; }
+        }
+        public Image MovementImage
+        {
+            get { return _image; }
+            set { _image = value; }
+        }
+        public Label DebugLabel {
+            get {
+                return Debug;
+            }
+            set {
+                Debug = value;
+            }
+        }
 
         public MovementScreen()
         {
