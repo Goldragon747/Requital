@@ -8,7 +8,8 @@
         mc:Ignorable="d"
         Title="Test UserControls" Width="1250" Height="650" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <uc:CombatScreen/>
+        <uc:CreationScreen/>
+        <!--<uc:CombatScreen/>-->
         <!--<uc:CharacterStats/>-->
     </Grid>
 </Window>
