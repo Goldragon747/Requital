@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Requital;
 
 namespace TestUserControls.UserControls
 {
@@ -29,11 +30,15 @@ namespace TestUserControls.UserControls
         public CreationScreen()
         {
             InitializeComponent();
-            int[] nums = Enumerable.Range(24, 100).ToArray();
-            ItemsComboBox.ItemsSource = nums;
+            //int[] nums = Enumerable.Range(24, 100).ToArray();
+            List<Characters> charList = new List<Characters>()
+            {
+                new Warrior(), new Rogue(), new Mage(), new Cleric(),
+            };
+            ItemsComboBox.ItemsSource = charList;
 
-            Person per = new Person(0);
-            StatsPanel.DataContext = per;
+            //Person per = new Person(0);
+            StatsPanel.DataContext = ItemsComboBox.Items.CurrentItem;
         }
         int createCounter = 0;
         private void Create_Click(object sender, RoutedEventArgs e)

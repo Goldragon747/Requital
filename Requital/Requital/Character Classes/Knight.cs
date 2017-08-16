@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Requital.Character_Classes
 {
-    class Knight : Characters
+    public class Knight : Characters
     {
         public void knight()
         {

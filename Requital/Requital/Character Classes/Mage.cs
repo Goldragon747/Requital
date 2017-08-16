@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Requital
 {
-    class Mage : Characters
+    public class Mage : Characters
     {
         public void mage(string name)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Requital
 {
-    class Rogue : Characters
+    public class Rogue : Characters
     {
         public void rogue(string name)
         {
