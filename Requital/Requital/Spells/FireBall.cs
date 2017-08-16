@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Requital.Spells
 {
-    class FireBall : Spells
+    public class FireBall : Spells
     {
         public void FireBallSpell()
         {

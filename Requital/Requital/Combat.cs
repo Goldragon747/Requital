@@ -36,7 +36,7 @@ namespace Requital
                 kill(attacker, defender);
             }
         }
-        public int fireBall(Characters attacker, Characters defender)
+        public void attackSpells(Characters attacker, Characters defender)
         {
             FireBall f = new FireBall();
             if (attacker.Mana >= f.ManaCost)
@@ -53,26 +53,31 @@ namespace Requital
                 {
                     finalDamage = 0;
                 }
-
+                defender.Health -= finalDamage;
                 if (defender.Health == 0 || defender.Health <= 0)
                 {
                     defender.Health = 0;
                     kill(attacker, defender);
                 }
-                return finalDamage;
-            }
-            else
-            {
-                return 0;
             }
         }
-        public void heal(Characters healer, Characters afflicted)
+        public void healingSpells(Characters healer, Characters afflicted)
         {
-            afflicted.Health += healer.SpellPower;
-            if(afflicted.Health >= afflicted.MaxHealth)
+            Heal h = new Heal();
+            if (healer.Mana >= h.ManaCost && afflicted.IsDead == false)
             {
-                afflicted.Health = afflicted.MaxHealth;
+                healer.Mana -= h.ManaCost;
+                int finalHealing = healer.SpellPower + h.Healing;
+                afflicted.Health += finalHealing;
+                if (afflicted.Health >= afflicted.MaxHealth)
+                {
+                    afflicted.Health = afflicted.MaxHealth;
+                }
             }
+        }
+        public void revive(Characters healer, Characters afflicted)
+        {
+
         }
         public void defend(Characters defender)
         {
@@ -90,6 +95,7 @@ namespace Requital
         }
         public void kill(Characters attacker, Characters defender)
         {
+            defender.IsDead = true;
             int expGain = defender.Experience;
             attacker.Experience += expGain;
             //TODO Death animation and get rid of the clickable enemy
@@ -97,7 +103,7 @@ namespace Requital
             if(attacker.Experience >= expCap)
             {
                 lvl.pickClass(attacker);
-            }
+            }  
         }
 
         public string loadDialogue(string dialogue)
@@ -105,11 +111,6 @@ namespace Requital
             //TODO
             //We will actually have this go to the combat dialogue GUI Element in the future
             return dialogue;
-        }
-        public void death()
-        {
-
-        }
-        
+        }        
     }
 }
