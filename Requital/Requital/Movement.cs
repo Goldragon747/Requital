@@ -22,6 +22,9 @@ namespace Requital
         private double x = 0;
         private double y = 0;
 
+        public double X { get => x; set => x = value; }
+        public double Y { get => y; set => y = value; }
+
         public Movement(MainWindow window)
         {
             mainWindow = window;
@@ -171,33 +174,42 @@ namespace Requital
                 {
                     for (int i = 0; i < 16; i++)
                     {
-                        x += 1;
-                        Canvas.SetTop(mainWindow.MovementScreen.mainCanvas, x);
+                        X += 1;
+                        mainWindow.MoveCanvasTop(X);
+                        mainWindow.Triggered = mainWindow.HitDetection();
                     }
                 }
                 else if (direction == 3)
                 {
                     for (int i = 0; i < 16; i++)
                     {
-                        x -= 1;
-                        Canvas.SetTop(mainWindow.MovementScreen.mainCanvas, x);
+                        X -= 1;
+                        mainWindow.MoveCanvasTop(X);
+                        mainWindow.Triggered = mainWindow.HitDetection();
                     }
                 }
                 else if (direction == 4)
                 {
                     for (int i = 0; i < 19; i++)
                     {
-                        y += 1;
-                        Canvas.SetLeft(mainWindow.MovementScreen.mainCanvas, y);
+                        Y += 1;
+                        mainWindow.MoveCanvasLeft(Y);
+                        mainWindow.Triggered = mainWindow.HitDetection();
                     }
                 }
                 else if (direction == 2)
                 {
                     for (int i = 0; i < 19; i++)
                     {
-                        y -= 1;
-                        Canvas.SetLeft(mainWindow.MovementScreen.mainCanvas, y);
+                        Y -= 1;
+                        mainWindow.MoveCanvasLeft(Y);
+                        mainWindow.Triggered = mainWindow.HitDetection();
+                        
                     }
+                }
+                if(!mainWindow.Triggered)
+                {
+                    //mainWindow.MovementScreen.Debug.Content = mainWindow.Triggered; //REMOVE ---------------------------------------------
                 }
             }
         }

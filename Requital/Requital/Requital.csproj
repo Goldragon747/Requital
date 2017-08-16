@@ -64,6 +64,7 @@
     <Compile Include="Character Classes\Knight.cs" />
     <Compile Include="Encounters.cs" />
     <Compile Include="Character Classes\Goblin.cs" />
+    <Compile Include="HitBox.cs" />
     <Compile Include="LevelUp.cs" />
     <Compile Include="Character Classes\Mage.cs" />
     <Compile Include="Character Classes\Rogue.cs" />
@@ -75,8 +76,7 @@
     <Compile Include="Spells\Heal.cs" />
     <Compile Include="Spells\Revive.cs" />
     <Compile Include="Spells\Spells.cs" />
-    <Compile Include="Windows\MovementScreen.xaml.cs">
-      <DependentUpon>MovementScreen.xaml</DependentUpon>
+    <Compile Include="Windows\MovementScreen.xaml.cs">	<Compile Include="Trigger.cs" />      <DependentUpon>MovementScreen.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -131,12 +131,6 @@
     <Resource Include="resources\Bitmap1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\wood-texture.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\Cave.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="assets\Rouge\moving_down\1.png" />
     <Resource Include="assets\Rouge\moving_down\2.png" />
     <Resource Include="assets\Rouge\moving_down\3.png" />
@@ -171,10 +165,12 @@
     <Resource Include="assets\Rouge\moving_up\8.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\Cave.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="BruschiArtwork\" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Resource Include="assets\Maps\Cave.png" />
+  </ItemGroup>
+	<ItemGroup>
+    <Resource Include="assets\Maps\FinalCave.jpg" />
+  </ItemGroup>  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

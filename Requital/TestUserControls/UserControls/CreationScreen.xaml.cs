@@ -12,50 +12,61 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Requital;
 
 namespace TestUserControls.UserControls
 {
-    /// <summary>
-    /// Interaction logic for CreationScreen.xaml
-    /// </summary>
+    public class Person
+    {
+        public Person(int health)
+        {
+            Health = health;
+        }
+
+        public int Health { get; set; }
+    }
     public partial class CreationScreen : UserControl
     {
         public CreationScreen()
         {
             InitializeComponent();
-            int[] nums = Enumerable.Range(24, 100).ToArray();
-            className.ItemsSource = nums;
-            
-        }
-        private void Next_Click(object sender, RoutedEventArgs e)
-        {
-            //cb.Items.MoveCurrentToNext();
-            //MessageBox.Show($"{cb.Items.CurrentItem}");
-        }
+            //int[] nums = Enumerable.Range(24, 100).ToArray();
+            List<Characters> charList = new List<Characters>()
+            {
+                new Warrior(), new Rogue(), new Mage(), new Cleric(),
+            };
+            ItemsComboBox.ItemsSource = charList;
 
-        private void Prev_Click(object sender, RoutedEventArgs e)
-        {
-
+            //Person per = new Person(0);
+            StatsPanel.DataContext = ItemsComboBox.Items.CurrentItem;
         }
         int createCounter = 0;
         private void Create_Click(object sender, RoutedEventArgs e)
         {
+            Binding bind = new Binding();
             if (createCounter < 4)
             {
+                Person p = new Person((int)NameLabel.Content);
                 Button b = new Button();
                 b.Background = Brushes.Moccasin;
                 b.Width = 100;
                 b.Height = 100;
-                b.Content = $"Class: {cb.Items.CurrentItem} \nName: {Username.Text}";
+                b.Content = $"Class: {NameLabel.Content} \nName: {Username.Text}";
+
+                b.DataContext = p;
+                b.Click += B_Click;
 
                 TeamGrid.Children.Add(b);
             }
             createCounter++;
         }
-        ComboBox cb = new ComboBox();
-        private void className_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+        private void B_Click(object sender, RoutedEventArgs e)
         {
-            cb = (ComboBox)sender;
+            Button b = ((Button)sender);
+            Person p = (Person)b.DataContext;
+
+            StatsPanel.DataContext = p;
         }
     }
 }
