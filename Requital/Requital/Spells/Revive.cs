@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Requital.Spells
 {
-    public class Heal: Spells
+    public class Revive : Spells
     {
-        public void healSpell()
+        public void reviveSpell()
         {
             base.Damage = 0;
-            base.Healing = 5;
-            base.ManaCost = 5;
-            base.Name = "Heal";
+            base.Healing = 1;
+
         }
     }
 }

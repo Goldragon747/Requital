@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Requital.Spells
 {
-    class Spells
+    public class Spells
     {
         private string name;
         private int manaCost;

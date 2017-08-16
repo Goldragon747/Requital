@@ -76,10 +76,14 @@ namespace Requital
                     //double y1 = ((movementLogic.Y + 300) - (Canvas.GetTop(t)));
                     double x1 = movementLogic.X - 570;
                     double y1 = movementLogic.Y - 300;
+                    double leftBounds = (movementLogic.X + Canvas.GetLeft(t));
+                    double rightBounds = (movementLogic.X + Canvas.GetLeft(t)) + t.Width;
+                    double topBounds = (movementLogic.Y + Canvas.GetTop(t));
+                    double bottomBounds = (movementLogic.Y + Canvas.GetTop(t)) + t.Height;
                     counter++;
                     MovementScreen.Debug.Content = $"{counter} : {x1} : {y1} : { triggered }";
-                    return (x1 >= (movementLogic.X + Canvas.GetLeft(t)) && x1 <= (movementLogic.X + Canvas.GetLeft(t)) + t.Width) 
-                        && (y1 >= (movementLogic.Y + Canvas.GetTop(t)) && y1 <= (movementLogic.Y + Canvas.GetTop(t)) + t.Height);
+                    return ((x1 >= leftBounds && x1 <= rightBounds)
+                        && (y1 <= topBounds && y1 >= bottomBounds));
                 }
             }
             return false;
