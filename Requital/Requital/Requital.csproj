@@ -57,6 +57,10 @@
     <Compile Include="Assets.cs" />
     <Compile Include="Character Classes\Cleric.cs" />
     <Compile Include="Character Classes\ElfCleric.cs" />
+    <Compile Include="Character Classes\ElfMage.cs" />
+    <Compile Include="Character Classes\ElfRogue.cs" />
+    <Compile Include="Character Classes\ElfWarrior.cs" />
+    <Compile Include="Character Classes\GoblinRogue.cs" />
     <Compile Include="Character Classes\Knight.cs" />
     <Compile Include="Encounters.cs" />
     <Compile Include="Character Classes\Goblin.cs" />
@@ -167,6 +171,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BruschiArtwork\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Maps\Cave.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,37 +6,30 @@
              xmlns:local="clr-namespace:TestUserControls.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+    <Grid x:Name="MainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <!--<Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>-->
-        
+
         <!--Choose Column-->
         <StackPanel Grid.Column="0" Background="CadetBlue">
             <DockPanel Margin="110,5,110,20">
-                <Button DockPanel.Dock="Left" Width="50" Height="30"
-                        Content="Prev" Click="Prev_Click"/>
-                <Button DockPanel.Dock="Right" Width="50" Height="30"
-                        Content="Next" Click="Next_Click"/>
-                <ComboBox x:Name="className" Background="AliceBlue" Height="30" SelectionChanged="className_SelectionChanged"
-                          SelectedIndex="0" />
+                <Button DockPanel.Dock="Left" Width="50" Height="30" Content="Prev"/>
+                <Button DockPanel.Dock="Right" Width="50" Height="30" Content="Next"/>
+                <ComboBox x:Name="ItemsComboBox" Background="AliceBlue" Height="30"/>
             </DockPanel>
             <DockPanel>
                 <TextBox x:Name="Username" DockPanel.Dock="Left" Background="Moccasin"
-                         Width="110" Text="10 max" MaxLines="1" MaxLength="10"/>
+                         Width="110" Text="MAX 10" MaxLines="1" MaxLength="10"/>
                 <Label Content="Name"/>
             </DockPanel>
             <Button Content="Create Character" Click="Create_Click"/>
         </StackPanel>
         
         <!--Stats Column-->
-        <StackPanel Background="CadetBlue" Grid.Column="1">
+        <StackPanel x:Name="StatsPanel" Background="CadetBlue" Grid.Column="1">
             <StackPanel.Resources>
                 <Style x:Key="LabelOutput">
                     <Setter Property="Label.Background" Value="Moccasin"/>
@@ -51,35 +44,36 @@
             </StackPanel.Resources>
             <DockPanel>
                 <Label Content="Health" Style="{StaticResource LabelName}"/>
-                <Label Style="{StaticResource LabelOutput}"/>
+                <Label Content="{Binding Health}" Style="{StaticResource LabelOutput}"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Mana" Style="{StaticResource LabelName}"/>
-                <Label Style="{StaticResource LabelOutput}"/>
+                <Label Content="{Binding Mana}" Style="{StaticResource LabelOutput}"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Attack" Style="{StaticResource LabelName}"/>
-                <Label Style="{StaticResource LabelOutput}"/>
+                <Label Content="{Binding Attack}" Style="{StaticResource LabelOutput}"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Physical Defense" Style="{StaticResource LabelName}"/>
-                <Label Style="{StaticResource LabelOutput}"/>
+                <Label Content="{Binding PhysicalDefense}" Style="{StaticResource LabelOutput}"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Magic Defense" Style="{StaticResource LabelName}"/>
-                <Label Style="{StaticResource LabelOutput}"/>
+                <Label Content="{Binding MagicDefense}" Style="{StaticResource LabelOutput}"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Spell Power" Style="{StaticResource LabelName}"/>
-                <Label Style="{StaticResource LabelOutput}"/>
+                <Label Content="{Binding SpellPower}" Style="{StaticResource LabelOutput}"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Speed" Style="{StaticResource LabelName}"/>
-                <Label Style="{StaticResource LabelOutput}"/>
+                <Label Content="{Binding Speed}" Style="{StaticResource LabelOutput}"/>
             </DockPanel>
         </StackPanel>
         
         <!--Team Column-->
         <UniformGrid x:Name="TeamGrid" Background="CadetBlue" Grid.Column="2"/>
+        <Label x:Name="NameLabel" Content="{Binding ElementName=ItemsComboBox, Path=SelectedItem}" Visibility="Hidden"/>
     </Grid>
 </UserControl>
