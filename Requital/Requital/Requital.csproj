@@ -71,6 +71,7 @@
     <Compile Include="Character Classes\SkeletonArcher.cs" />
     <Compile Include="Character Classes\Tian.cs" />
     <Compile Include="Character Classes\Warrior.cs" />
+    <Compile Include="Spells\Spells.cs" />
     <Compile Include="Windows\MovementScreen.xaml.cs">
       <DependentUpon>MovementScreen.xaml</DependentUpon>
     </Compile>
