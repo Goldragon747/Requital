@@ -23,6 +23,8 @@ namespace Requital.Character_Classes
             base.Mana = 0;
             string[] spells = { };
             base.Spells = spells;
+            base.HasDefended = false;
+            base.IsDead = false;
 
 
         }
